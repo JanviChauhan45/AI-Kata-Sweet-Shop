@@ -1,6 +1,6 @@
 from django.db import models
 import uuid
-from django.db import models
+from django.contrib.auth.hashers import make_password, check_password
 
 # Create your models here.
 class User(models.Model):
@@ -12,12 +12,18 @@ class User(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
-    password_hash = models.CharField(max_length=256)  # Use Django's built-in hashing
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
+    password_hash = models.CharField(max_length=256)
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='customer')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.email
+    
+    def set_password(self, password):
+        self.password_hash = make_password(password)
+    
+    def check_password(self, password):
+        return check_password(password, self.password_hash)
 
 
 class Sweet(models.Model):
