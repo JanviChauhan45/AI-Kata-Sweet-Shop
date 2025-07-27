@@ -1,57 +1,59 @@
-from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-from .serializers import UserSerializer, UserLoginSerializer, SweetSerializer
-from .models import User, Sweet
-from rest_framework.generics import ListAPIView
-
-# Create your views here.
-class UserList(ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+from django.contrib.auth.hashers import make_password, check_password
+from .models import User
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register(request):
-    serializer = UserSerializer(data=request.data)
-    if serializer.is_valid():
-        user = serializer.save()
+    try:
+        data = request.data
+        user = User.objects.create(
+            name=data['name'],
+            email=data['email'],
+            password_hash=make_password(data['password']),
+            role='customer'
+        )
         refresh = RefreshToken.for_user(user)
         return Response({
-            'user': UserSerializer(user).data,
-            'refresh': str(refresh),
             'access': str(refresh.access_token),
-        }, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            'refresh': str(refresh),
+            'user': {'id': user.id, 'name': user.name, 'email': user.email, 'role': user.role}
+        })
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login(request):
-    serializer = UserLoginSerializer(data=request.data)
-    if serializer.is_valid():
-        email = serializer.validated_data['email']
-        password = serializer.validated_data['password']
-        
-        try:
-            user = User.objects.get(email=email)
-            if user.check_password(password):
-                refresh = RefreshToken.for_user(user)
-                return Response({
-                    'user': UserSerializer(user).data,
-                    'refresh': str(refresh),
-                    'access': str(refresh.access_token),
-                })
-            else:
-                return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
-        except User.DoesNotExist:
-            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
-    
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    try:
+        data = request.data
+        user = User.objects.get(email=data['email'])
+        if check_password(data['password'], user.password_hash):
+            refresh = RefreshToken.for_user(user)
+            return Response({
+                'access': str(refresh.access_token),
+                'refresh': str(refresh),
+                'user': {'id': user.id, 'name': user.name, 'email': user.email, 'role': user.role}
+            })
+        else:
+            return Response({'error': 'Invalid password'}, status=status.HTTP_401_UNAUTHORIZED)
+    except User.DoesNotExist:
+        return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def profile(request):
-    return Response(UserSerializer(request.user).data)
+    user = request.user
+    return Response({
+        'id': user.id,
+        'name': user.name,
+        'email': user.email,
+        'role': user.role
+    })
+
