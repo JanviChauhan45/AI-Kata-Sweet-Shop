@@ -1,70 +1,165 @@
-# Getting Started with Create React App
+# Sweet Shop Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React frontend for the Sweet Shop application with clean, simple, and well-documented code.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Clean & Simple Code**: Well-documented components with clear structure
+- **Error Handling**: Graceful fallback when API is unavailable
+- **Responsive Design**: Works on desktop and mobile devices
+- **Search & Filter**: Find sweets by name, description, or category
+- **Cart Integration**: Add sweets to cart with authentication
+- **Loading States**: User-friendly loading indicators
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── components/
+│   ├── dashboard/
+│   │   ├── Dashboard.js          # Main dashboard component
+│   │   ├── Dashboard.css         # Dashboard styles
+│   │   └── sections/
+│   │       ├── SweetsSection.js  # Sweets display and management
+│   │       ├── OrdersSection.js  # Order history
+│   │       └── ProfileSection.js # User profile management
+│   ├── Login.js                  # Login component
+│   └── Register.js               # Registration component
+├── context/
+│   └── AuthContext.js            # Authentication context
+├── utils/
+│   └── api.js                    # API utility functions
+└── App.js                        # Main app component
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Setup Instructions
 
-### `npm test`
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd sweetshop_frontend
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser:**
+   Navigate to `http://localhost:3000`
 
-### `npm run eject`
+## 🔧 Configuration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### API Configuration
+The API base URL is configured in `src/utils/api.js`:
+```javascript
+const API_BASE_URL = 'http://127.0.0.1:8000/api';
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Environment Variables
+Create a `.env` file in the frontend root directory:
+```env
+REACT_APP_API_URL=http://127.0.0.1:8000/api
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📖 Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Authentication
+1. **Register**: Create a new account with name, email, and password
+2. **Login**: Sign in with your email and password
+3. **Token Storage**: Authentication tokens are stored in localStorage
 
-## Learn More
+### Browsing Sweets
+1. **View Collection**: See all available sweets with images and details
+2. **Search**: Use the search bar to find specific sweets
+3. **Filter by Category**: Click category buttons to filter sweets
+4. **View Details**: Click "View Details" to see full information
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Shopping Cart
+1. **Add to Cart**: Click "Add to Cart" on any sweet (requires login)
+2. **Stock Check**: Items show stock levels and disable when out of stock
+3. **Cart Management**: View and manage items in your cart
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎨 Styling
 
-### Code Splitting
+The application uses clean, modern CSS with:
+- **Responsive Grid**: Adapts to different screen sizes
+- **Hover Effects**: Interactive elements with smooth transitions
+- **Color Coding**: Visual indicators for stock levels and status
+- **Emoji Icons**: User-friendly visual elements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔍 Error Handling
 
-### Analyzing the Bundle Size
+The application includes comprehensive error handling:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### API Errors
+- **Network Issues**: Shows fallback data when API is unavailable
+- **Authentication Errors**: Prompts user to login when required
+- **Server Errors**: Displays user-friendly error messages
 
-### Making a Progressive Web App
+### Fallback Data
+When the API is unavailable, the app shows sample data:
+- Sample sweets (Gulab Jamun, Rasgulla, Jalebi)
+- Sample categories (Traditional, Modern, Diabetic)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧪 Development
 
-### Advanced Configuration
+### Code Quality
+- **JSDoc Comments**: All functions are documented
+- **Consistent Naming**: Clear, descriptive variable and function names
+- **Modular Structure**: Reusable components and utilities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Adding New Features
+1. **Create Component**: Add new components in the appropriate directory
+2. **Update API**: Add new endpoints to `src/utils/api.js`
+3. **Add Styles**: Update CSS files for new components
+4. **Test**: Verify functionality and error handling
 
-### Deployment
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Build for Production
+```bash
+npm run build
+```
 
-### `npm run build` fails to minify
+### Deploy
+The `build` folder contains the production-ready files that can be deployed to any static hosting service.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 API Endpoints
+
+The frontend communicates with these backend endpoints:
+
+- `GET /api/sweets/` - Get all sweets
+- `GET /api/categories/` - Get sweet categories
+- `POST /api/auth/login/` - User login
+- `POST /api/auth/register/` - User registration
+- `POST /api/cart/add/` - Add item to cart
+
+## 🤝 Contributing
+
+1. Follow the existing code style and documentation
+2. Add JSDoc comments for new functions
+3. Test error handling scenarios
+4. Ensure responsive design works on mobile
+
+## 📞 Support
+
+For issues or questions:
+1. Check the browser console for error messages
+2. Verify the backend API is running
+3. Check network connectivity
+4. Review the API documentation
+
+---
+
+**Happy Coding! 🍬✨**

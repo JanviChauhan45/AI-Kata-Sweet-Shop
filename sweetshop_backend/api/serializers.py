@@ -21,6 +21,9 @@ class UserLoginSerializer(serializers.Serializer):
     password = serializers.CharField()
 
 class SweetSerializer(serializers.ModelSerializer):
+    image_url = serializers.ReadOnlyField()  # This will use the property from the model
+    
     class Meta:
         model = Sweet
-        fields = ['id','name','category','price','quantity','description','image_url','created_at','updated_at']
+        fields = ['id', 'name', 'category', 'price', 'stock', 'unit', 'description', 'image', 'image_url', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at', 'image_url']
