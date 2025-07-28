@@ -37,23 +37,32 @@ A full-stack web application for managing a sweet shop with customer authenticat
 
 <!-- Add your application screenshots here -->
 [Welcome Page ]
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <img width="1346" height="665" alt="image" src="https://github.com/user-attachments/assets/80a1bd2e-7dd0-4e47-bf5b-3b2a047e8c23" />
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+<img width="1346" height="665" alt="image" src="https://github.com/user-attachments/assets/80a1bd2e-7dd0-4e47-bf5b-3b2a047e8c23" />
+>>>>>>> Stashed changes
 
 
 
 
 [Register Page]
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <img width="1339" height="654" alt="image" src="https://github.com/user-attachments/assets/983e1941-c16b-462a-beae-341b46b04187" />
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+<img width="1339" height="654" alt="image" src="https://github.com/user-attachments/assets/983e1941-c16b-462a-beae-341b46b04187" />
+>>>>>>> Stashed changes
 
 
 
 [Login Page]
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 
@@ -65,10 +74,18 @@ A full-stack web application for managing a sweet shop with customer authenticat
 [Customer Page]
 <img width="1332" height="658" alt="image" src="https://github.com/user-attachments/assets/f4e2a10f-d407-4d86-b9eb-4540a4f695c5" />
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+<img width="1358" height="656" alt="image" src="https://github.com/user-attachments/assets/d5994854-9def-412d-bc6d-e380405bbe1a" />
+
+
+[Customer Page]
+<img width="1332" height="658" alt="image" src="https://github.com/user-attachments/assets/f4e2a10f-d407-4d86-b9eb-4540a4f695c5" />
+>>>>>>> Stashed changes
 
 
 
 [Purchase From Collection]
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 
@@ -86,19 +103,24 @@ A full-stack web application for managing a sweet shop with customer authenticat
 <img width="1226" height="543" alt="image" src="https://github.com/user-attachments/assets/5ea918ba-955b-4eba-8768-0fddb588217b" />
 
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+<img width="595" height="495" alt="image" src="https://github.com/user-attachments/assets/c909ee65-3152-4cb8-918d-6e8428ef3427" />
 
 
-[Admin Panel ]
-
-<<<<<<< HEAD
+<img width="1267" height="584" alt="image" src="https://github.com/user-attachments/assets/f27aa844-eed3-4572-91b9-91310f4232c6" />
 
 
-<!-- Example:
-![Welcome Page](screenshots/welcome.png)
-![Customer Dashboard](screenshots/dashboard.png)
-![Purchase Modal](screenshots/purchase.png)
--->
 
+
+[Out Of Stock]
+<img width="1226" height="543" alt="image" src="https://github.com/user-attachments/assets/5ea918ba-955b-4eba-8768-0fddb588217b" />
+
+>>>>>>> Stashed changes
+
+
+
+
+<<<<<<< Updated upstream
 ## 🏗️ Architecture
 =======
 <img width="1335" height="603" alt="image" src="https://github.com/user-attachments/assets/9198fa8f-05e3-412a-bc35-6be704760e54" />
@@ -113,6 +135,11 @@ A full-stack web application for managing a sweet shop with customer authenticat
 
 ##  Architecture
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+
+
+##  Architecture
+>>>>>>> Stashed changes
 
 ```
 AI-Kata-Sweet-Shop/
@@ -126,11 +153,15 @@ AI-Kata-Sweet-Shop/
     └── src/utils/             # API utilities
 ```
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ## 🚀 Quick Start
 =======
 ##  Quick Start
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+##  Quick Start
+>>>>>>> Stashed changes
 
 ### Backend Setup
 ```bash
@@ -149,11 +180,15 @@ npm install
 npm start
 ```
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ## 🔌 Key API Endpoints
 =======
 ##  Key API Endpoints
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+##  Key API Endpoints
+>>>>>>> Stashed changes
 
 - `POST /api/register/` - User registration
 - `POST /api/login/` - User login
@@ -169,6 +204,7 @@ npm start
 - **Frontend Tests**: React component testing with Jest
 - **Backend Tests**: Django model and view testing
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ### Test Coverage
 - Backend API endpoints: 85%
@@ -180,6 +216,10 @@ npm start
 
 ## AI Usage & Development Process
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+
+## AI Usage & Development Process
+>>>>>>> Stashed changes
 
 ### AI-Assisted Development
 - **Code Generation**: AI helped generate initial Django models, serializers, and views
@@ -189,10 +229,13 @@ npm start
 - **Documentation**: README and code comments generated with AI
 
 ### AI Tools Used
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 - **Claude Sonnet 4**: Primary AI assistant for code generation and debugging
 =======
 >>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
+=======
+>>>>>>> Stashed changes
 - **GitHub Copilot**: Code completion and suggestions
 - **ChatGPT**: Alternative AI for problem-solving
 
