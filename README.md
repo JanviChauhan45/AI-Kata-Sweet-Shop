@@ -1,282 +1,175 @@
-#  Kata Sweet Shop Management System
+# 🍬 Kata Sweet Shop Management System
 
 A full-stack web application for managing a sweet shop with customer authentication, product catalog, and purchase management. Built with Django REST Framework backend and React frontend.
 
-##  Features
+## 🛠️ Tech Stack
 
+### Backend
+- **Django 5.1.7** - Web framework
+- **Django REST Framework** - API development
+- **SQLite** - Database
+- **JWT Authentication** - Secure user authentication
+- **Pillow** - Image processing
+- **django-cors-headers** - Cross-origin resource sharing
 
-###  Customer Features
+### Frontend
+- **React 18** - UI library
+- **React Router DOM** - Navigation
+- **Axios** - HTTP client
+- **Bootstrap 5** - CSS framework
+- **Local Storage** - Client-side data persistence
+
+## ✨ Features
+
+### 🛍️ Customer Features
 - **User Authentication**: Secure login/register with JWT tokens
 - **Product Catalog**: Browse sweets with images, descriptions, and pricing
-- **Advanced Search & Filtering**: 
-  - Search by sweet name
-  - Filter by category (dynamic categories)
-  - Filter by price range
-  - Filter by stock availability
-  - Sort by name, price, or stock
-- **Purchase System**: 
-  - Quantity-based purchasing (kg/grams)
-  - Real-time stock updates
-  - Out-of-stock indicators
-  - Purchase history tracking
+- **Advanced Search & Filtering**: Search by name, filter by category, price range, stock availability
+- **Purchase System**: Quantity-based purchasing (kg/grams) with real-time stock updates
 - **Responsive Design**: Clean, minimal Bootstrap UI
 
-###  Admin Features
+### 🔧 Admin Features
 - **Product Management**: Add, edit, and manage sweets
 - **Inventory Control**: Track stock levels and sales
-- **User Management**: View customer accounts and purchases
 - **Image Upload**: Store product images in backend media folder
 
-## 🏗 Architecture
+## 📸 Screenshots
+
+<!-- Add your application screenshots here -->
+[Welcome Page ]
+<img width="1346" height="665" alt="image" src="https://github.com/user-attachments/assets/80a1bd2e-7dd0-4e47-bf5b-3b2a047e8c23" />
+
+
+
+
+[Register Page]
+<img width="1339" height="654" alt="image" src="https://github.com/user-attachments/assets/983e1941-c16b-462a-beae-341b46b04187" />
+
+
+
+[Login Page]
+<img width="1358" height="656" alt="image" src="https://github.com/user-attachments/assets/d5994854-9def-412d-bc6d-e380405bbe1a" />
+
+
+[Customer Page]
+<img width="1332" height="658" alt="image" src="https://github.com/user-attachments/assets/f4e2a10f-d407-4d86-b9eb-4540a4f695c5" />
+
+
+
+[Purchase From Collection]
+<img width="595" height="495" alt="image" src="https://github.com/user-attachments/assets/c909ee65-3152-4cb8-918d-6e8428ef3427" />
+
+
+<img width="1267" height="584" alt="image" src="https://github.com/user-attachments/assets/f27aa844-eed3-4572-91b9-91310f4232c6" />
+
+
+
+
+[Out Of Stock]
+<img width="1226" height="543" alt="image" src="https://github.com/user-attachments/assets/5ea918ba-955b-4eba-8768-0fddb588217b" />
+
+
+
+[Admin Panel ]
+
+<img width="1335" height="603" alt="image" src="https://github.com/user-attachments/assets/9198fa8f-05e3-412a-bc35-6be704760e54" />
+
+<img width="1337" height="604" alt="image" src="https://github.com/user-attachments/assets/7886dbaa-295c-4d0d-9ade-36c34b207fac" />
+
+<img width="1358" height="557" alt="image" src="https://github.com/user-attachments/assets/1b147e55-2732-43b5-8f10-c75f58089c15" />
+
+
+
+
+
+##  Architecture
 
 ```
 AI-Kata-Sweet-Shop/
 ├── sweetshop_backend/          # Django REST API
-│   ├── api/                   # Main app with models, views, serializers
-│   ├── sweetshop_backend/     # Django project settings
-│   └── media/                 # Uploaded images storage
+│   ├── api/                   # Models, views, serializers
+│   ├── sweetshop_backend/     # Django settings
+│   └── media/                 # Image storage
 └── sweetshop_frontend/        # React frontend
-    ├── src/
-    │   ├── components/        # React components
-    │   ├── context/           # Authentication context
-    │   └── utils/             # API utilities
-    └── public/                # Static assets
+    ├── src/components/        # React components
+    ├── src/context/           # Auth context
+    └── src/utils/             # API utilities
 ```
 
 ##  Quick Start
 
-### Prerequisites
-- Python 3.8+
-- Node.js 14+
-- npm or yarn
-
 ### Backend Setup
-
-1. **Navigate to backend directory**
-   ```bash
-   cd sweetshop_backend
-   ```
-
-2. **Install Python dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run database migrations**
-   ```bash
-   python manage.py makemigrations
-   python manage.py migrate
-   ```
-
-4. **Create superuser (optional)**
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-5. **Load sample data**
-   ```bash
-   python manage.py create_sample_data
-   ```
-
-6. **Start Django server**
-   ```bash
-   python manage.py runserver
-   ```
-   Backend will be available at `http://localhost:8000`
+```bash
+cd sweetshop_backend
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py create_sample_data
+python manage.py runserver
+```
 
 ### Frontend Setup
-
-1. **Navigate to frontend directory**
-   ```bash
-   cd sweetshop_frontend
-   ```
-
-2. **Install Node.js dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start React development server**
-   ```bash
-   npm start
-   ```
-   Frontend will be available at `http://localhost:3000`
-
-##  Database Models
-
-### User Model
-```python
-- id: AutoField (Primary Key)
-- name: CharField
-- email: EmailField (Unique)
-- password_hash: CharField
-- role: CharField (customer/admin)
-- created_at: DateTimeField
+```bash
+cd sweetshop_frontend
+npm install
+npm start
 ```
 
-### Sweet Model
-```python
-- id: AutoField (Primary Key)
-- name: CharField
-- category: CharField (Dynamic categories)
-- description: TextField
-- price: DecimalField (per kg)
-- quantity: DecimalField (in kg)
-- image: ImageField (File upload)
-- created_at: DateTimeField
-```
+##  Key API Endpoints
 
-### Purchase Model
-```python
-- id: AutoField (Primary Key)
-- user: ForeignKey (User)
-- sweet: ForeignKey (Sweet)
-- quantity: DecimalField (purchased amount)
-- total_price: DecimalField
-- purchase_date: DateTimeField
-```
-
-## 🔌 API Endpoints
-
-### Authentication
 - `POST /api/register/` - User registration
 - `POST /api/login/` - User login
-- `POST /api/logout/` - User logout
-
-### Public Endpoints
-- `GET /api/sweets/simple/` - Get all sweets (simple format)
-- `GET /api/sweets/public/` - Get all sweets (DRF format)
-- `GET /api/sweets/<id>/` - Get specific sweet details
-
-### Protected Endpoints
+- `GET /api/sweets/simple/` - Get all sweets
 - `POST /api/sweets/<id>/purchase/` - Purchase a sweet
-- `GET /api/purchases/user/` - Get user's purchase history
-- `POST /api/purchases/create/` - Create purchase record
+- `GET /api/purchases/user/` - User's purchase history
 
-### Admin Endpoints
-- `GET /api/admin-sweets/` - Admin sweet management
-- `POST /api/admin-sweets/` - Create new sweet
-- `PUT /api/admin-sweets/<id>/` - Update sweet
-- `DELETE /api/admin-sweets/<id>/` - Delete sweet
+## 🧪 TDD (Test-Driven Development)
 
-## 🎨 Frontend Components
-
-### Core Components
-- **Welcome.js**: Landing page with login/register
-- **CustomerDashboard.js**: Main customer interface
-- **AuthContext.js**: Authentication state management
-- **api.js**: API utility functions
-
-### Dashboard Sections
-- **SweetsSection.js**: Product catalog display
-- **SweetsFilters.js**: Search and filter controls
-- **QuantitySelector.js**: Purchase quantity modal
-- **OrdersSection.js**: Purchase history
-- **ProfileSection.js**: User profile management
-
-##  Configuration
-
-### Backend Settings (`sweetshop_backend/settings.py`)
-- **Database**: SQLite (development)
-- **Authentication**: JWT tokens
-- **CORS**: Configured for frontend communication
-- **Media Files**: Local storage for images
-- **Permissions**: Public endpoints for customers, protected for admin
-
-### Frontend Configuration
-- **API Base URL**: `http://localhost:8000/api/`
-- **Authentication**: JWT tokens stored in localStorage
-- **Routing**: React Router for navigation
-- **Styling**: Bootstrap 5 for responsive design
-
-##  Development Commands
-
-### Backend
-```bash
-# Create migrations
-python manage.py makemigrations
-
-# Apply migrations
-python manage.py migrate
-
-# Create superuser
-python manage.py createsuperuser
-
-# Load sample data
-python manage.py create_sample_data
-
-# Reset database
-python manage.py reset_data
-
-# Run tests
-python manage.py test
-```
-
-### Frontend
-```bash
-# Start development server
-npm start
-
-# Build for production
-npm run build
-
-# Run tests
-npm test
-
-# Eject (irreversible)
-npm run eject
-```
-
-##  Environment Variables
-
-Create a `.env` file in the backend directory:
-```env
-DEBUG=True
-SECRET_KEY=your-secret-key-here
-ALLOWED_HOSTS=localhost,127.0.0.1
-CORS_ALLOWED_ORIGINS=http://localhost:3000
-```
-
-##  Troubleshooting
-
-### Common Issues
-
-1. **"Authentication credentials were not provided"**
-   - Check if JWT authentication is properly configured
-   - Verify token is being sent in request headers
-
-2. **"Failed to load sweets"**
-   - Ensure backend server is running on port 8000
-   - Check CORS settings in Django
-   - Verify API endpoints are accessible
-
-3. **Database migration errors**
-   - Run `python manage.py makemigrations`
-   - Run `python manage.py migrate`
-   - Check model field changes
-
-4. **Image upload issues**
-   - Ensure `Pillow` is installed
-   - Check media folder permissions
-   - Verify `MEDIA_URL` and `MEDIA_ROOT` settings
-
-##  Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Testing Strategy
+- **Unit Tests**: Individual component and function testing
+- **Integration Tests**: API endpoint testing
+- **Frontend Tests**: React component testing with Jest
+- **Backend Tests**: Django model and view testing
 
 
+## AI Usage & Development Process
 
-##  Acknowledgments
+### AI-Assisted Development
+- **Code Generation**: AI helped generate initial Django models, serializers, and views
+- **Frontend Components**: React components created with AI assistance
+- **API Integration**: AI assisted in connecting frontend to backend APIs
+- **Error Resolution**: AI helped debug authentication and CORS issues
+- **Documentation**: README and code comments generated with AI
 
-- Django REST Framework for robust API development
-- React for dynamic frontend components
-- Bootstrap for responsive UI design
-- JWT for secure authentication
+### AI Tools Used
+- **GitHub Copilot**: Code completion and suggestions
+- **ChatGPT**: Alternative AI for problem-solving
 
----
+## 💭 Reflection on AI Impact
 
-**Made with ❤️ for Sweet Shop Management** 
+### Positive Impacts
+- **Rapid Prototyping**: AI enabled quick creation of full-stack application
+- **Learning Acceleration**: AI explanations helped understand complex concepts
+- **Bug Resolution**: AI quickly identified and fixed authentication issues
+- **Code Quality**: AI-generated code followed best practices
+
+### Challenges Faced
+- **Authentication Complexity**: JWT setup required multiple iterations
+- **CORS Configuration**: Cross-origin issues needed careful debugging
+- **Type Handling**: Decimal/float type mismatches in purchase calculations
+- **Component Structure**: React component organization needed refinement
+
+### Lessons Learned
+- **AI as Assistant**: AI is most effective when used as a collaborative tool
+- **Iterative Development**: Multiple iterations often needed for complex features
+- **Testing Importance**: TDD helps catch issues early in AI-assisted development
+- **Documentation**: Clear documentation crucial when working with AI-generated code
+
+##  Common Issues & Solutions
+
+1. **Authentication Errors**: Ensure JWT tokens are properly configured
+2. **CORS Issues**: Check django-cors-headers configuration
+3. **Database Migrations**: Run makemigrations and migrate after model changes
+4. **Image Upload**: Verify Pillow installation and media folder permissions
+
+
