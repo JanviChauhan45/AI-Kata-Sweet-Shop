@@ -35,111 +35,34 @@ A full-stack web application for managing a sweet shop with customer authenticat
 
 ## 📸 Screenshots
 
-<!-- Add your application screenshots here -->
-[Welcome Page ]
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
+### Welcome Page
 <img width="1346" height="665" alt="image" src="https://github.com/user-attachments/assets/80a1bd2e-7dd0-4e47-bf5b-3b2a047e8c23" />
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-<img width="1346" height="665" alt="image" src="https://github.com/user-attachments/assets/80a1bd2e-7dd0-4e47-bf5b-3b2a047e8c23" />
->>>>>>> Stashed changes
 
-
-
-
-[Register Page]
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
+### Register Page
 <img width="1339" height="654" alt="image" src="https://github.com/user-attachments/assets/983e1941-c16b-462a-beae-341b46b04187" />
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-<img width="1339" height="654" alt="image" src="https://github.com/user-attachments/assets/983e1941-c16b-462a-beae-341b46b04187" />
->>>>>>> Stashed changes
 
-
-
-[Login Page]
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-
-
-[Customer Page]
-=======
+### Login Page
 <img width="1358" height="656" alt="image" src="https://github.com/user-attachments/assets/d5994854-9def-412d-bc6d-e380405bbe1a" />
 
-
-[Customer Page]
+### Customer Page
 <img width="1332" height="658" alt="image" src="https://github.com/user-attachments/assets/f4e2a10f-d407-4d86-b9eb-4540a4f695c5" />
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-<img width="1358" height="656" alt="image" src="https://github.com/user-attachments/assets/d5994854-9def-412d-bc6d-e380405bbe1a" />
 
-
-[Customer Page]
-<img width="1332" height="658" alt="image" src="https://github.com/user-attachments/assets/f4e2a10f-d407-4d86-b9eb-4540a4f695c5" />
->>>>>>> Stashed changes
-
-
-
-[Purchase From Collection]
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-
-
-[Out Of Stock]
-=======
+### Purchase From Collection
 <img width="595" height="495" alt="image" src="https://github.com/user-attachments/assets/c909ee65-3152-4cb8-918d-6e8428ef3427" />
 
-
+### Out Of Stock
 <img width="1267" height="584" alt="image" src="https://github.com/user-attachments/assets/f27aa844-eed3-4572-91b9-91310f4232c6" />
 
-
-
-
-[Out Of Stock]
 <img width="1226" height="543" alt="image" src="https://github.com/user-attachments/assets/5ea918ba-955b-4eba-8768-0fddb588217b" />
 
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-<img width="595" height="495" alt="image" src="https://github.com/user-attachments/assets/c909ee65-3152-4cb8-918d-6e8428ef3427" />
-
-
-<img width="1267" height="584" alt="image" src="https://github.com/user-attachments/assets/f27aa844-eed3-4572-91b9-91310f4232c6" />
-
-
-
-
-[Out Of Stock]
-<img width="1226" height="543" alt="image" src="https://github.com/user-attachments/assets/5ea918ba-955b-4eba-8768-0fddb588217b" />
-
->>>>>>> Stashed changes
-
-
-
-
-<<<<<<< Updated upstream
-## 🏗️ Architecture
-=======
+### Admin Interface
 <img width="1335" height="603" alt="image" src="https://github.com/user-attachments/assets/9198fa8f-05e3-412a-bc35-6be704760e54" />
 
 <img width="1337" height="604" alt="image" src="https://github.com/user-attachments/assets/7886dbaa-295c-4d0d-9ade-36c34b207fac" />
 
 <img width="1358" height="557" alt="image" src="https://github.com/user-attachments/assets/1b147e55-2732-43b5-8f10-c75f58089c15" />
 
-
-
-
-
-##  Architecture
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-
-
-##  Architecture
->>>>>>> Stashed changes
+## 🏗️ Architecture
 
 ```
 AI-Kata-Sweet-Shop/
@@ -153,15 +76,7 @@ AI-Kata-Sweet-Shop/
     └── src/utils/             # API utilities
 ```
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 ## 🚀 Quick Start
-=======
-##  Quick Start
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-##  Quick Start
->>>>>>> Stashed changes
 
 ### Backend Setup
 ```bash
@@ -180,15 +95,7 @@ npm install
 npm start
 ```
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 ## 🔌 Key API Endpoints
-=======
-##  Key API Endpoints
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-##  Key API Endpoints
->>>>>>> Stashed changes
 
 - `POST /api/register/` - User registration
 - `POST /api/login/` - User login
@@ -204,22 +111,12 @@ npm start
 - **Frontend Tests**: React component testing with Jest
 - **Backend Tests**: Django model and view testing
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 ### Test Coverage
 - Backend API endpoints: 85%
 - Frontend components: 70%
 - Database operations: 90%
 
 ## 🤖 AI Usage & Development Process
-=======
-
-## AI Usage & Development Process
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
-
-## AI Usage & Development Process
->>>>>>> Stashed changes
 
 ### AI-Assisted Development
 - **Code Generation**: AI helped generate initial Django models, serializers, and views
@@ -229,17 +126,11 @@ npm start
 - **Documentation**: README and code comments generated with AI
 
 ### AI Tools Used
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 - **Claude Sonnet 4**: Primary AI assistant for code generation and debugging
-=======
->>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
-=======
->>>>>>> Stashed changes
 - **GitHub Copilot**: Code completion and suggestions
 - **ChatGPT**: Alternative AI for problem-solving
 
-## 💭 Reflection on AI Impact
+##  Reflection on AI Impact
 
 ### Positive Impacts
 - **Rapid Prototyping**: AI enabled quick creation of full-stack application
@@ -259,7 +150,7 @@ npm start
 - **Testing Importance**: TDD helps catch issues early in AI-assisted development
 - **Documentation**: Clear documentation crucial when working with AI-generated code
 
-##  Common Issues & Solutions
+## 🔧 Common Issues & Solutions
 
 1. **Authentication Errors**: Ensure JWT tokens are properly configured
 2. **CORS Issues**: Check django-cors-headers configuration
