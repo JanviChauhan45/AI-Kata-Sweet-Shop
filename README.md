@@ -1,10 +1,11 @@
-# 🍬 Kata Sweet Shop Management System
+#  Kata Sweet Shop Management System
 
 A full-stack web application for managing a sweet shop with customer authentication, product catalog, and purchase management. Built with Django REST Framework backend and React frontend.
 
-## ✨ Features
+##  Features
 
-### 🛍️ Customer Features
+
+###  Customer Features
 - **User Authentication**: Secure login/register with JWT tokens
 - **Product Catalog**: Browse sweets with images, descriptions, and pricing
 - **Advanced Search & Filtering**: 
@@ -20,13 +21,13 @@ A full-stack web application for managing a sweet shop with customer authenticat
   - Purchase history tracking
 - **Responsive Design**: Clean, minimal Bootstrap UI
 
-### 🔧 Admin Features
+###  Admin Features
 - **Product Management**: Add, edit, and manage sweets
 - **Inventory Control**: Track stock levels and sales
 - **User Management**: View customer accounts and purchases
 - **Image Upload**: Store product images in backend media folder
 
-## 🏗️ Architecture
+## 🏗 Architecture
 
 ```
 AI-Kata-Sweet-Shop/
@@ -42,7 +43,7 @@ AI-Kata-Sweet-Shop/
     └── public/                # Static assets
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -101,7 +102,7 @@ AI-Kata-Sweet-Shop/
    ```
    Frontend will be available at `http://localhost:3000`
 
-## 📊 Database Models
+##  Database Models
 
 ### User Model
 ```python
@@ -173,7 +174,7 @@ AI-Kata-Sweet-Shop/
 - **OrdersSection.js**: Purchase history
 - **ProfileSection.js**: User profile management
 
-## 🔧 Configuration
+##  Configuration
 
 ### Backend Settings (`sweetshop_backend/settings.py`)
 - **Database**: SQLite (development)
@@ -188,7 +189,7 @@ AI-Kata-Sweet-Shop/
 - **Routing**: React Router for navigation
 - **Styling**: Bootstrap 5 for responsive design
 
-## 🛠️ Development Commands
+##  Development Commands
 
 ### Backend
 ```bash
@@ -226,7 +227,7 @@ npm test
 npm run eject
 ```
 
-## 📝 Environment Variables
+##  Environment Variables
 
 Create a `.env` file in the backend directory:
 ```env
@@ -236,7 +237,7 @@ ALLOWED_HOSTS=localhost,127.0.0.1
 CORS_ALLOWED_ORIGINS=http://localhost:3000
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -259,7 +260,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000
    - Check media folder permissions
    - Verify `MEDIA_URL` and `MEDIA_ROOT` settings
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -267,11 +268,9 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Django REST Framework for robust API development
 - React for dynamic frontend components
