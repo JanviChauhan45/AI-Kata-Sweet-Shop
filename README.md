@@ -37,29 +37,60 @@ A full-stack web application for managing a sweet shop with customer authenticat
 
 <!-- Add your application screenshots here -->
 [Welcome Page ]
+<<<<<<< HEAD
+=======
+<img width="1346" height="665" alt="image" src="https://github.com/user-attachments/assets/80a1bd2e-7dd0-4e47-bf5b-3b2a047e8c23" />
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 
 
 
 [Register Page]
+<<<<<<< HEAD
+=======
+<img width="1339" height="654" alt="image" src="https://github.com/user-attachments/assets/983e1941-c16b-462a-beae-341b46b04187" />
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 
 
 [Login Page]
+<<<<<<< HEAD
 
 
 [Customer Page]
+=======
+<img width="1358" height="656" alt="image" src="https://github.com/user-attachments/assets/d5994854-9def-412d-bc6d-e380405bbe1a" />
+
+
+[Customer Page]
+<img width="1332" height="658" alt="image" src="https://github.com/user-attachments/assets/f4e2a10f-d407-4d86-b9eb-4540a4f695c5" />
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 
 
 [Purchase From Collection]
+<<<<<<< HEAD
 
 
 [Out Of Stock]
+=======
+<img width="595" height="495" alt="image" src="https://github.com/user-attachments/assets/c909ee65-3152-4cb8-918d-6e8428ef3427" />
+
+
+<img width="1267" height="584" alt="image" src="https://github.com/user-attachments/assets/f27aa844-eed3-4572-91b9-91310f4232c6" />
+
+
+
+
+[Out Of Stock]
+<img width="1226" height="543" alt="image" src="https://github.com/user-attachments/assets/5ea918ba-955b-4eba-8768-0fddb588217b" />
+
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 
 [Admin Panel ]
 
+<<<<<<< HEAD
 
 
 <!-- Example:
@@ -69,6 +100,19 @@ A full-stack web application for managing a sweet shop with customer authenticat
 -->
 
 ## 🏗️ Architecture
+=======
+<img width="1335" height="603" alt="image" src="https://github.com/user-attachments/assets/9198fa8f-05e3-412a-bc35-6be704760e54" />
+
+<img width="1337" height="604" alt="image" src="https://github.com/user-attachments/assets/7886dbaa-295c-4d0d-9ade-36c34b207fac" />
+
+<img width="1358" height="557" alt="image" src="https://github.com/user-attachments/assets/1b147e55-2732-43b5-8f10-c75f58089c15" />
+
+
+
+
+
+##  Architecture
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 ```
 AI-Kata-Sweet-Shop/
@@ -82,7 +126,11 @@ AI-Kata-Sweet-Shop/
     └── src/utils/             # API utilities
 ```
 
+<<<<<<< HEAD
 ## 🚀 Quick Start
+=======
+##  Quick Start
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 ### Backend Setup
 ```bash
@@ -101,7 +149,11 @@ npm install
 npm start
 ```
 
+<<<<<<< HEAD
 ## 🔌 Key API Endpoints
+=======
+##  Key API Endpoints
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 - `POST /api/register/` - User registration
 - `POST /api/login/` - User login
@@ -117,12 +169,17 @@ npm start
 - **Frontend Tests**: React component testing with Jest
 - **Backend Tests**: Django model and view testing
 
+<<<<<<< HEAD
 ### Test Coverage
 - Backend API endpoints: 85%
 - Frontend components: 70%
 - Database operations: 90%
 
 ## 🤖 AI Usage & Development Process
+=======
+
+## AI Usage & Development Process
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 
 ### AI-Assisted Development
 - **Code Generation**: AI helped generate initial Django models, serializers, and views
@@ -132,7 +189,10 @@ npm start
 - **Documentation**: README and code comments generated with AI
 
 ### AI Tools Used
+<<<<<<< HEAD
 - **Claude Sonnet 4**: Primary AI assistant for code generation and debugging
+=======
+>>>>>>> 73a0b207a2fe989ad7c6716b6b21b07a1a3020d2
 - **GitHub Copilot**: Code completion and suggestions
 - **ChatGPT**: Alternative AI for problem-solving
 
