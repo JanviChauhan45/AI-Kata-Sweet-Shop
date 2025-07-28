@@ -294,7 +294,7 @@ const Sidebar = ({ activeSection, setActiveSection, handleLogout, userName }) =>
         <h5 className="mb-1">Sweets</h5>
         {userName && (
           <small className="text-light">
-            Welcome, {userName}! 👋
+            Welcome, {userName}! 
           </small>
         )}
       </div>
@@ -308,20 +308,10 @@ const Sidebar = ({ activeSection, setActiveSection, handleLogout, userName }) =>
         >
           Sweet Collection
         </div>
-        <div 
-          className={`mb-2 p-2 rounded cursor-pointer ${activeSection === 'purchases' ? 'bg-primary text-white' : ''}`}
-          onClick={() => setActiveSection('purchases')}
-          style={{ cursor: 'pointer' }}
-        >
-          My Purchases
-        </div>
-        <div 
-          className={`mb-2 p-2 rounded cursor-pointer ${activeSection === 'orders' ? 'bg-primary text-white' : ''}`}
-          onClick={() => setActiveSection('orders')}
-          style={{ cursor: 'pointer' }}
-        >
-          Orders
-        </div>
+       
+          
+        
+     
         <div 
           className={`mb-2 p-2 rounded cursor-pointer ${activeSection === 'profile' ? 'bg-primary text-white' : ''}`}
           onClick={() => setActiveSection('profile')}

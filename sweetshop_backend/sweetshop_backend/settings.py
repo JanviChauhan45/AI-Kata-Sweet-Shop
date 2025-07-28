@@ -175,3 +175,75 @@ SIMPLE_JWT = {
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True  # Only for development
 CORS_ALLOW_CREDENTIALS = True
+
+# Django Jazzmin Configuration (Temporarily disabled due to template compatibility issues)
+# JAZZMIN_SETTINGS = {
+#     "site_title": "Sweet Shop Admin",
+#     "site_header": "Sweet Shop",
+#     "site_brand": "Sweet Shop",
+#     "site_logo": None,
+#     "welcome_sign": "Welcome to Sweet Shop Admin",
+#     "copyright": "Sweet Shop Ltd",
+#     "user_avatar": None,
+#     "topmenu_links": [
+#         {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+#         {"name": "Sweets", "url": "admin:api_sweet_changelist"},
+#         {"name": "Users", "url": "admin:api_user_changelist"},
+#         {"name": "Purchases", "url": "admin:api_purchase_changelist"},
+#     ],
+#     "show_sidebar": True,
+#     "navigation_expanded": True,
+#     "icons": {
+#         "auth": "fas fa-users-cog",
+#         "auth.user": "fas fa-user",
+#         "auth.Group": "fas fa-users",
+#         "api.User": "fas fa-user",
+#         "api.Sweet": "fas fa-candy-cane",
+#         "api.Purchase": "fas fa-shopping-cart",
+#     },
+#     "default_icon_parents": "fas fa-chevron-circle-right",
+#     "default_icon_children": "fas fa-circle",
+#     "related_modal_active": False,  # Disabled to avoid template issues
+#     "custom_css": None,
+#     "custom_js": None,
+#     "show_ui_builder": False,
+#     "changeform_format": "horizontal_tabs",
+#     "changeform_format_overrides": {
+#         "auth.user": "collapsible",
+#         "auth.group": "vertical_tabs",
+#     },
+#     "hide_models": [],  # Ensure no models are hidden
+#     "order_with_respect_to": ["auth", "api.User", "api.Sweet", "api.Purchase"],
+# }
+
+# JAZZMIN_UI_TWEAKS = {
+#     "navbar_small_text": False,
+#     "footer_small_text": False,
+#     "body_small_text": False,
+#     "brand_small_text": False,
+#     "brand_colour": "navbar-success",
+#     "accent": "accent-teal",
+#     "navbar": "navbar-dark",
+#     "no_navbar_border": False,
+#     "navbar_fixed": False,
+#     "layout_boxed": False,
+#     "footer_fixed": False,
+#     "sidebar_fixed": False,
+#     "sidebar": "sidebar-dark-success",
+#     "sidebar_nav_small_text": False,
+#     "sidebar_disable_expand": False,
+#     "sidebar_nav_child_indent": False,
+#     "sidebar_nav_compact_style": False,
+#     "sidebar_nav_legacy_style": False,
+#     "sidebar_nav_flat_style": False,
+#     "theme": "default",  # Changed from cosmo to default for better compatibility
+#     "dark_mode_theme": None,
+#     "button_classes": {
+#         "primary": "btn-primary",
+#         "secondary": "btn-secondary",
+#         "info": "btn-info",
+#         "warning": "btn-warning",
+#         "danger": "btn-danger",
+#         "success": "btn-success"
+#     }
+# }

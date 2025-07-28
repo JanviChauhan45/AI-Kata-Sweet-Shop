@@ -50,11 +50,11 @@ class PurchaseSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Purchase
-        fields = ['id', 'user', 'user_name', 'sweet', 'sweet_name', 'quantity', 'total_price', 'status', 'purchase_date', 'delivery_address', 'notes']
+        fields = ['id', 'user', 'user_name', 'sweet', 'sweet_name', 'quantity', 'total_price', 'purchase_date']
         read_only_fields = ['id', 'purchase_date']
 
 class PurchaseCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Purchase
-        fields = ['id', 'user', 'sweet', 'quantity', 'total_price', 'status', 'delivery_address', 'notes']
+        fields = ['id', 'user', 'sweet', 'quantity', 'total_price']
         read_only_fields = ['id'] 
